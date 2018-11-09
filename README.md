@@ -67,7 +67,7 @@ Redux loading manager handles all of the requests and automatically stores their
 
 ## Usage
 
-First, put the loading reducer in your root reducer:
+First, put the `loading` reducer in your root reducer:
 
 ```js
 import { combineReducers } from 'redux';
@@ -79,7 +79,7 @@ export default combineReducers({
 });
 ```
 
-Then, use `createIsLoadingSelector` selector factory to get loading state of any request by passing a `request` action type as an argument:
+Then, use `createIsLoadingSelector` selector factory to get loading state of any request by passing a **request** action type as an argument:
 
 ```js
 import { createIsLoadingSelector } from 'redux-loading-manager';
