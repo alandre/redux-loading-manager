@@ -8,7 +8,7 @@
 ## Installation
 
 ```sh
-$ npm install redux-loading-manager
+$ npm install redux-loading-manager --save
 ```
 or
 ```sh
