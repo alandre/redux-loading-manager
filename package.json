@@ -1,6 +1,6 @@
 {
   "name": "redux-loading-manager",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Redux reducer and selector for automatically manage loading states.",
   "main": "lib/index.js",
   "scripts": {
