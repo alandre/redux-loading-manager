@@ -1,14 +1,14 @@
 {
-  "name": "redux-loading",
+  "name": "redux-loading-manager",
   "version": "0.0.1",
-  "description": "Redux reducer and selector for automatically keeping loading states.",
-  "main": "index.js",
+  "description": "Redux reducer and selector for automatically manage loading states.",
+  "main": "lib/index.js",
   "scripts": {
-    "test": "npm run test"
+    "build": "babel ./src -d ./lib"
   },
   "repository": {
     "type": "git",
-    "url": "giit"
+    "url": "git@github.com:alandre/redux-loading-manager.git"
   },
   "keywords": [
     "redux",
@@ -21,6 +21,8 @@
     "babel-core": "^6.26.3",
     "babel-eslint": "^10.0.1",
     "babel-loader": "^8.0.4",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-stage-2": "^6.24.1",
     "cross-env": "^5.2.0",
     "eslint": "^5.8.0",
     "eslint-config-airbnb": "^17.1.0",

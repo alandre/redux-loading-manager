@@ -14,7 +14,8 @@ const createLoadingReducer = ({
     return [successPostfix, errorPostfix].reduce((prevState, postfix) => {
       if (action.type.endsWith(postfix)) {
         const typeBase = action.type.slice(0, -postfix.length);
-        const {[typeBase + requestPostfix]: omitted, ...nextState} = prevState;
+        const nextState = {...prevState};
+        delete nextState[typeBase + requestPostfix];
 
         return nextState;
       }
