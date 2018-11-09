@@ -25,6 +25,6 @@ const createLoadingReducer = ({
   };
 };
 
-export const selectIsLoading = (state, type, reducerName = 'loading') => !!state[reducerName][type];
+export const createIsLoadingSelector = (type, reducerName = 'loading') => state => !!state[reducerName][type];
 
 export default createLoadingReducer;

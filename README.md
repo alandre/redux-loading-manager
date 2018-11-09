@@ -2,26 +2,23 @@
 
 [Redux](https://redux.js.org/) reducer and selector for automatically manage loading states.
 
-[![build status](https://img.shields.io/travis/reduxjs/redux-loading-manager/master.svg?style=flat-square)](https://travis-ci.org/reduxjs/redux-loading-manager)
 [![npm version](https://img.shields.io/npm/v/redux-loading-manager.svg?style=flat-square)](https://www.npmjs.com/package/redux-loading-manager)
-[![npm downloads](https://img.shields.io/npm/dm/redux-loading-manager.svg?style=flat-square)](https://www.npmjs.com/package/redux-loading-manager)
+<!--[![npm downloads](https://img.shields.io/npm/dm/redux-loading-manager.svg?style=flat-square)](https://www.npmjs.com/package/redux-loading-manager)-->
 
 ## Installation
 
-```shell
-npm install redux-loading-manager
+```sh
+$ npm install redux-loading-manager
 ```
 or
-```shell
-yarn add redux-loading-manager
+```sh
+$ yarn add redux-loading-manager
 ```
 
 
 ## Motivation
 
 The better part of Redux applications want to manage requests performing to show some spinners or loading placeholders. Often, reducers of such applications look like this:
-
-An action creator that returns a function to perform asynchronous dispatch:
 
 ```js
 const FETCH_USER_REQUEST = 'FETCH_USER_REQUEST';
@@ -82,14 +79,14 @@ export default combineReducers({
 });
 ```
 
-Then, use `selectIsLoading` selector to get loading state of any request by passing a `request` action type as an argument:
+Then, use `createIsLoadingSelector` selector factory to get loading state of any request by passing a `request` action type as an argument:
 
 ```js
-import { selectIsLoading } from 'redux-loading-manager';
+import { createIsLoadingSelector } from 'redux-loading-manager';
 
 import types from './types';
 
-export const selectUserLoadingState = state => selectIsLoading(state, types.FETCH_USER_REQUEST);
+export const selectUserLoadingState = createIsLoadingSelector(types.FETCH_USER_REQUEST);
 ```
 
 And use it wherever you want!
@@ -110,7 +107,7 @@ Redux loading manager allows you to pass an `options` argument to `createLoading
 | successPostfix | String | _SUCCESS      | Postfix of success action types. Sets `isLoading` to false.    |
 | errorPostfix   | String | _ERROR        | Postfix of error action types. Also sets `isLoading` to false. |
 
-If you want to use the loading reducer with the other name, you should pass its name as the third argument of `selectIsLoading` function:
+If you want to use the loading reducer with the other name, you should pass its name as the second argument of `createIsLoadingSelector` function:
 
 ```js
 // rootReducer.js
@@ -124,8 +121,8 @@ export default combineReducers({
 
 ```js
 // selectors.js
-import { selectIsLoading } from 'redux-loading-manager';
+import { createIsLoadingSelector } from 'redux-loading-manager';
 import types from './types';
 
-export const selectUserLoadingState = state => selectIsLoading(state, types.FETCH_USER_REQUEST, 'loadingState');
+export const selectUserLoadingState = createIsLoadingSelector(types.FETCH_USER_REQUEST, 'loadingState');
 ```
