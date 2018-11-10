@@ -21,6 +21,6 @@ const createLoadingReducer = ({
   };
 };
 
-export const createIsLoadingSelector = (type, reducerName = 'loading') => state => !!state.get(reducerName).get(type);
+export const createIsLoadingSelector = (type, reducerName = 'loading') => state => !!state.getIn([reducerName, type]);
 
 export default createLoadingReducer;
