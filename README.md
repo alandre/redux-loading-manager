@@ -20,7 +20,7 @@ $ yarn add redux-loading-manager
 
 ## Motivation
 
-The better part of Redux applications want to manage requests performing to show some spinners or loading placeholders. Often, reducers of such applications look like this:
+The better part of Redux applications want to control requests performing to show some spinners or loading placeholders. Often, reducers of such applications look like this:
 
 ```js
 const FETCH_USER_REQUEST = 'FETCH_USER_REQUEST';
@@ -98,6 +98,11 @@ const mapStateToProps = state => ({
   isUserLoading: selectUserLoadingState(state)
 });
 ```
+
+
+## Immutable
+
+To use Redux loading manager with [Redux-immutable](https://github.com/gajus/redux-immutable) just import the same functions from `redux-loading-manager/immutable`.
 
 ## Options
 

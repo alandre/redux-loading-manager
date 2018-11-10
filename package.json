@@ -1,10 +1,10 @@
 {
   "name": "redux-loading-manager",
-  "version": "1.0.0",
+  "version": "1.1.2",
   "description": "Redux reducer and selector for automatically manage loading states.",
   "main": "lib/index.js",
   "scripts": {
-    "build": "babel ./src -d ./lib"
+    "build": "babel ./src -d ."
   },
   "repository": {
     "type": "git",
@@ -16,6 +16,9 @@
   ],
   "author": "Alexey Goncharenko <gon4arenko.alexey@gmail.com>",
   "license": "ISC",
+  "peerDependencies": {
+    "immutable": "^3.8.1 || ^4.0.0-rc.1"
+  },
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
@@ -26,6 +29,7 @@
     "cross-env": "^5.2.0",
     "eslint": "^5.8.0",
     "eslint-config-airbnb": "^17.1.0",
+    "immutable": "^3.8.1 || ^4.0.0-rc.1",
     "webpack": "^4.25.1"
   }
 }
