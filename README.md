@@ -3,6 +3,8 @@
 [Redux](https://redux.js.org/) reducer and selector for automatically manage loading states.
 
 [![npm version](https://img.shields.io/npm/v/redux-loading-manager.svg?style=flat-square)](https://www.npmjs.com/package/redux-loading-manager)
+[![npm bundle size (minified)](https://img.shields.io/bundlephobia/min/redux-loading-manager.svg)](https://www.npmjs.com/package/redux-loading-manager)
+
 <!--[![npm downloads](https://img.shields.io/npm/dm/redux-loading-manager.svg?style=flat-square)](https://www.npmjs.com/package/redux-loading-manager)-->
 
 ## Installation
