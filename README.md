@@ -1,6 +1,6 @@
 # Redux Loading Manager
 
-[Redux](https://redux.js.org/) reducer and selector for automatically manage loading states.
+[Redux](https://redux.js.org/) reducer and selector for automatic loading states management.
 
 [![npm version](https://img.shields.io/npm/v/redux-loading-manager.svg?style=flat-square)](https://www.npmjs.com/package/redux-loading-manager)
 [![npm bundle size (minified)](https://img.shields.io/bundlephobia/min/redux-loading-manager.svg)](https://www.npmjs.com/package/redux-loading-manager)
@@ -64,7 +64,7 @@ switch (action.type) {
 }
 ```
 
-Redux loading manager handles all of the requests and automatically stores their loading states, so you no longer need to serve tens of `isLoading` flags.
+Redux loading manager handles all the requests and automatically stores their loading states, so you no longer need to serve tens of `isLoading` flags.
 
 
 ## Usage
@@ -114,7 +114,7 @@ Redux loading manager allows you to pass an `options` argument to `createLoading
 | successPostfix | String | _SUCCESS      | Postfix of success action types. Sets `isLoading` to false.    |
 | errorPostfix   | String | _ERROR        | Postfix of error action types. Also sets `isLoading` to false. |
 
-If you want to use the loading reducer with the other name, you should pass its name as the second argument of `createIsLoadingSelector` function:
+If you want to use the loading reducer with another name, you should pass its name as the second argument of `createIsLoadingSelector` function:
 
 ```js
 // rootReducer.js
