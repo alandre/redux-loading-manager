@@ -22,14 +22,14 @@
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
-    "babel-eslint": "^10.0.1",
-    "babel-loader": "^8.0.4",
+    "babel-eslint": "^10.0.3",
+    "babel-loader": "^8.0.6",
     "babel-preset-env": "^1.7.0",
     "babel-preset-stage-2": "^6.24.1",
     "cross-env": "^5.2.0",
-    "eslint": "^5.8.0",
-    "eslint-config-airbnb": "^17.1.0",
+    "eslint": "^6.2.2",
+    "eslint-config-airbnb": "^18.0.1",
     "immutable": "^3.8.1 || ^4.0.0-rc.1",
-    "webpack": "^4.25.1"
+    "webpack": "^4.39.2"
   }
 }
